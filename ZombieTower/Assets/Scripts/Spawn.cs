@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class Spawn : MonoBehaviour {
-    // The Monster that should be spawned
-    public GameObject monsterPrefab;
     
-    // Spawn Delay in seconds
+    public GameObject monsterPrefab;
+    public int count = 0;
+    public int zombies = 0;
     public float interval = 3;
     
     // Use this for initialization
@@ -15,5 +15,10 @@ public class Spawn : MonoBehaviour {
     
     void SpawnNext() {
         Instantiate(monsterPrefab, transform.position, Quaternion.identity);
+        count++;
+         if(count > 3)
+        {
+            CancelInvoke("SpawnNext");
+        }
     }
 }
