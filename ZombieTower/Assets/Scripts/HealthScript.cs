@@ -11,6 +11,8 @@ public class HealthScript : MonoBehaviour {
     }
     
     // Update is called once per frame
+
+    //code for quitting  the game build
     void Update () {
         if (Input.GetKey("escape"))
         {
