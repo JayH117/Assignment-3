@@ -25,6 +25,7 @@ public class ZombieBossAi : MonoBehaviour {
             Destroy(gameObject);
 
         }
+       
 
     }
   

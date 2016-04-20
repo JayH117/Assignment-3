@@ -36,6 +36,7 @@ public class HealthScript : MonoBehaviour {
         else
         {
             Destroy(transform.parent.gameObject);
+            
         }
     }
  
