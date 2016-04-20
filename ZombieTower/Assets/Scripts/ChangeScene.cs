@@ -4,11 +4,12 @@ using UnityEngine.SceneManagement;
 
 
 public class ChangeScene : MonoBehaviour {
-
-	// Update is called once per frame
-	public void ChangeToScene (string sceneToChangeTo)
+    //totrack zom kills
+    public int ZomKill = 0;
+    // Update is called once per frame
+    public void ChangeToScene (string sceneToChangeTo)
     {
-        Application.LoadLevel(sceneToChangeTo);
+        SceneManager.LoadScene(sceneToChangeTo);
 	}
    
     public void Exit()

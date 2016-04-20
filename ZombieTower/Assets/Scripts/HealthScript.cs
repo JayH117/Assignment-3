@@ -2,10 +2,14 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+
+
+
 public class HealthScript : MonoBehaviour {
     // The TextMesh Component
     TextMesh tm;
 
+    
     // Use this for initialization
     void Start () {
         tm = GetComponent<TextMesh>();
@@ -35,11 +39,27 @@ public class HealthScript : MonoBehaviour {
         }
         else
         {
+            //ZombieKill(ZomKill+=1);
             Destroy(transform.parent.gameObject);
-            
+
         }
-    }
- 
+        
+       /*
+       if (ZomKill > 4)
+        {
+            ChangeToScene("Level2");
+
+        }
+        else if (ZomKill > 9)
+        {
+            ChangeToScene("Level3");
+        }
+        else if (ZomKill > 12)
+        {
+            ChangeToScene("Won");
+        }
+        */
+    } 
     public void decreaseBase()
     {
         if (current() > 1)
@@ -54,6 +74,6 @@ public class HealthScript : MonoBehaviour {
     }
     public void ChangeToScene(string sceneToChangeTo)
     {
-        Application.LoadLevel(sceneToChangeTo);
+        SceneManager.LoadScene(sceneToChangeTo);
     }
 }
