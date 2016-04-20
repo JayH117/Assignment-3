@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HealthScript : MonoBehaviour {
     // The TextMesh Component
@@ -26,10 +27,31 @@ public class HealthScript : MonoBehaviour {
     }
 
 
-    public void decrease() {
+    public void decrease()
+    {
         if (current() > 1)
+        {
             tm.text = tm.text.Remove(tm.text.Length - 1);
+        }
         else
+        {
             Destroy(transform.parent.gameObject);
         }
+    }
+    public void decreaseBase()
+    {
+        if (current() > 1)
+        {
+            tm.text = tm.text.Remove(tm.text.Length - 1);
+        }
+        else
+        {
+            Destroy(transform.parent.gameObject);
+            ChangeToScene("Death");
+        }
+    }
+    public void ChangeToScene(string sceneToChangeTo)
+    {
+        Application.LoadLevel(sceneToChangeTo);
+    }
 }

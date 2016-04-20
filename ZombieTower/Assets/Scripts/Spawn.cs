@@ -16,9 +16,15 @@ public class Spawn : MonoBehaviour {
     void SpawnNext() {
         Instantiate(monsterPrefab, transform.position, Quaternion.identity);
         count++;
+        zombies++;
          if(count > 3)
         {
             CancelInvoke("SpawnNext");
+            if(zombies<=0)
+            {
+
+            }
+
         }
     }
     // need to add in largeZombie spawn

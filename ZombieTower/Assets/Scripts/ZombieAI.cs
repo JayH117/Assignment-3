@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class ZombieAI : MonoBehaviour {
 
 	void Start(){
@@ -10,11 +11,16 @@ public class ZombieAI : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void OnTriggerEnter(Collider co) {
+	void OnTriggerEnter(Collider co)
+    {
     
-    if (co.name == "Base") {
-        co.GetComponentInChildren<HealthScript>().decrease();
-        Destroy(gameObject);
+        if (co.name == "Base")
+        {
+            co.GetComponentInChildren<HealthScript>().decreaseBase();
+            Destroy(gameObject);
+            
+
         }
     }
+
 }
