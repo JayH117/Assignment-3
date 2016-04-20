@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
    
-    public float speed = 10;
+    public float speed = 6;
     
     public Transform target;    
     

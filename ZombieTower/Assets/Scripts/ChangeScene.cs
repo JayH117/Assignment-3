@@ -10,10 +10,7 @@ public class ChangeScene : MonoBehaviour {
     {
         Application.LoadLevel(sceneToChangeTo);
 	}
-    public void ChangeToScene(int sceneToChangeToNum)
-    {
-        Application.LoadLevel(sceneToChangeToNum);
-    }
+   
     public void Exit()
     {
         Application.Quit();
