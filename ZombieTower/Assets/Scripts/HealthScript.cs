@@ -27,7 +27,7 @@ public class HealthScript : MonoBehaviour {
     }
 
 
-    public void decrease()
+    public void decreaseZom()
     {
         if (current() > 1)
         {
@@ -38,6 +38,7 @@ public class HealthScript : MonoBehaviour {
             Destroy(transform.parent.gameObject);
         }
     }
+ 
     public void decreaseBase()
     {
         if (current() > 1)

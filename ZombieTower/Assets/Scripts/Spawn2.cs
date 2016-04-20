@@ -12,7 +12,7 @@ public class Spawn2 : MonoBehaviour {
     void Start()
     {
         InvokeRepeating("SpawnBoss",interval,interval);
-    }
+    }   
 
     void SpawnBoss()
     {
@@ -22,7 +22,7 @@ public class Spawn2 : MonoBehaviour {
         {
             CancelInvoke("SpawnBoss");
         }
+        
     }
-   
 
 }

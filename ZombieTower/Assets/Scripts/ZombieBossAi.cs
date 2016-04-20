@@ -23,8 +23,6 @@ public class ZombieBossAi : MonoBehaviour {
                 co.GetComponentInChildren<HealthScript>().decreaseBase();
             }
             Destroy(gameObject);
-            
-
 
         }
 

@@ -4,7 +4,8 @@ using System.Collections;
 public class Bullet : MonoBehaviour {
    
     public float speed = 6;
-    
+   
+
     public Transform target;    
     
     void FixedUpdate() {    
@@ -24,8 +25,10 @@ public class Bullet : MonoBehaviour {
         HealthScript health = co.GetComponentInChildren<HealthScript>();
         if (health) 
         {
-            health.decrease();
+            health.decreaseZom();
             Destroy(gameObject);
+            
         }
     }
+    
 }
